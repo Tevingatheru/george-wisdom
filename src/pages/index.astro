@@ -5,7 +5,6 @@ import Footer from "../components/Footer.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 import VideoEmbed from "../components/VideoEmbed.astro";
 
-
 const videos = [
 	{ videoId: "Ztvf7J9t3-s?si=dgKTGXXZfXRzb9FS" },
 	// ... more videos
@@ -23,24 +22,37 @@ const videos = [
 			<section class="videos-section">
 				{
 					videos.map((video) => (
-						<VideoEmbed key={video.videoId} videoId={video.videoId} />
+						<VideoEmbed
+							key={video.videoId}
+							videoId={video.videoId}
+						/>
 					))
 				}
 			</section>
-		
-			<h1>Embrace the Power of Faith</h1>
-			<p>
-				Experience Transformation and Find Purpose through Resurrection
-				Ministries
-			</p>
-			<p>
-				Resurrection Ministries, led by Apostle George Wisdom, offers
-				transformative teachings and a supportive community for
-				individuals seeking to deepen their connection with faith. Join
-				us on a journey of resurrection and discover your true purpose.
-				Start your spiritual growth today with Resurrection Ministries.
-			</p>
+
+			<section class="content-section">
+				<h1>Embrace the Power of Faith</h1>
+				<p>
+					Experience Transformation and Find Purpose through
+					Resurrection Ministries
+				</p>
+				<p>
+					Resurrection Ministries, led by Apostle George Wisdom,
+					offers transformative teachings and a supportive community
+					for individuals seeking to deepen their connection with
+					faith. Join us on a journey of resurrection and discover
+					your true purpose. Start your spiritual growth today with
+					Resurrection Ministries.
+				</p>
+			</section>
 		</main>
 		<Footer />
 	</body>
 </html>
+
+<style>
+	.content-section {
+		padding: auto;
+		margin: 50px 0px;
+	}
+</style>
