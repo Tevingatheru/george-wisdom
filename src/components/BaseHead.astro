@@ -4,15 +4,14 @@
 import { SITE_DESCRIPTION, SITE_TITLE } from "../consts";
 import "../styles/global.css";
 
+
 interface Props {
-	title: string;
-	description: string;
 	image?: string;
 }
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
-const { image = "/blog-placeholder-1.jpg" } = Astro.props;
+const { image = "/favicon.svg" } = Astro.props;
 ---
 
 <!-- Global Metadata -->
