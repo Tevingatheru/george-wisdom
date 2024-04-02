@@ -1,4 +1,8 @@
-<div class="social-links">
+---
+const { className } = Astro.props;
+---
+
+<div class={className}>
     <a href="https://www.youtube.com/@apostlegeorgewisdom2919" target="_blank">
         <span class="sr-only">Follow Apostle George Wisdom</span>
         <svg
@@ -44,6 +48,8 @@
 </div>
 
 <style>
+    .social-links-footer,
+    .social-links-footer a,
     .social-links,
     .social-links a {
         display: flex;
@@ -51,6 +57,7 @@
         margin: 0px 5px;
         justify-content: center;
     }
+
     @media (max-width: 720px) {
         .social-links {
             display: none;
