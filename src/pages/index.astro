@@ -6,7 +6,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 import VideoEmbed from "../components/VideoEmbed.astro";
 
 const videos = [
-	{ videoId: "Ztvf7J9t3-s?si=dgKTGXXZfXRzb9FS" },
+	{ videoId: "https://www.youtube.com/embed/Ztvf7J9t3-s?si=dgKTGXXZfXRzb9FS" },
 	// ... more videos
 ];
 ---
@@ -15,6 +15,12 @@ const videos = [
 <html lang="en">
 	<head>
 		<BaseHead  />
+		<style>
+			.content-section {
+				padding: auto;
+				margin: 50px 0px;
+			}
+		</style>
 	</head>
 	<body>
 		<Header />
@@ -50,9 +56,3 @@ const videos = [
 	</body>
 </html>
 
-<style>
-	.content-section {
-		padding: auto;
-		margin: 50px 0px;
-	}
-</style>

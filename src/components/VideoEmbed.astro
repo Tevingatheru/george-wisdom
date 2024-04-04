@@ -7,6 +7,7 @@ const { videoId } = Astro.props;
         position: relative;
         padding-bottom: 56.25%;
         height: 0;
+        margin: 10px 0px;
     }
     .video-container iframe {
         position: absolute;
@@ -19,8 +20,8 @@ const { videoId } = Astro.props;
 
 <div class="video-container">
     <iframe
-        src={`https://www.youtube.com/embed/${videoId}`}
-        title="YouTube video player"
+        src={`${videoId}`}
+        title="Video player"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowfullscreen
     >
